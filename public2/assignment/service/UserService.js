@@ -6,7 +6,7 @@
 
     function UserService() {
         var users = [
-		
+			
 		];
 
         var service = {
@@ -16,7 +16,6 @@
             deleteUserById : deleteUserById,
             updateUser : updateUser
         };
-
         return service;
         
         function guid() {
@@ -53,9 +52,9 @@
             callback(newUser);
         }
         
-        function deleteUserById(id, callback) {
+        function deleteUserById(userId, callback) {
             for (var i=0; i<users.length; i++) {
-                if (users[i].id == id) {
+                if (users[i].id == userId) {
                     users.splice(i,1);
 					callback(users)
                 }
@@ -65,9 +64,9 @@
             }
         }
 
-        function updateUser(id, user, callback) {
+        function updateUser(userId, user, callback) {
             for (var i=0; i<users.length; i++) {
-                if (users[i].id == id) {
+                if (users[i].id == userId) {
                     users[i].username = user.username;
                     users[i].password = user.password;
                     callback(users[i]);

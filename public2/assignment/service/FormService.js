@@ -6,7 +6,7 @@
 
     function formService() {
         var forms = [
-		
+			
 		];
 
         var service = {
@@ -15,7 +15,6 @@
             deleteFormById : deleteFormById,
             updateFormById : updateFormById
         };
-
         return service;
         
         function guid() {
