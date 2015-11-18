@@ -6,7 +6,7 @@
 	
 	function Configure($routeProvider) {
 		$routeProvider
-			.when("/home", {
+			.when("/index", {
 				templateUrl: "home/home.view.html"
 			})
 			.when("/login", {
@@ -26,7 +26,7 @@
 				controller: "FormController"
 			})
 			.otherwise({
-				redirectTo: "/home"
+				redirectTo: "/index"
 			});
 	}
 }) ();
